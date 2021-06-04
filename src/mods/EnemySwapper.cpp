@@ -135,6 +135,8 @@ uintptr_t curSetDataAddr = 0;
 
 static naked void enemy_swap_detour1() {
     __asm {
+        //mov byte ptr [rcx+0x50], 1
+        //mov dword ptr [rcx+0x54], 3
         cmp byte ptr [EnemySwapper::cheaton], 0
         je originalcode
         cmp byte ptr [EnemySwapper::isSwapAll], 1
@@ -214,6 +216,8 @@ static naked void enemy_swap_detour1() {
 
 static naked void enemy_swap_detour2() {
   __asm {
+        //mov byte ptr [rcx+0x50], 1
+        //mov dword ptr [rcx+0x54], 3
         cmp byte ptr [EnemySwapper::cheaton], 0
         je originalcode//checkdataoption
         cmp byte ptr [EnemySwapper::isSwapAll], 1
@@ -495,6 +499,8 @@ static naked void enemy_swap_detour3() {
 
 static naked void enemy_swap_detour6() {
     __asm {
+        //mov byte ptr [r14+0x50], 1
+        //mov dword ptr [r14+0x54], 3
         cmp byte ptr [EnemySwapper::cheaton], 0
         je originalcode//checkdataoption
         cmp byte ptr [EnemySwapper::isSwapAll], 1

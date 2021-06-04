@@ -15,6 +15,8 @@ static naked void wave_data_detour() {
 	__asm {
 		//cmp byte ptr [LDK::cheaton], 1
 		//je wavespawncheat
+		//mov byte ptr [rcx+0x38], 1
+        //mov dword ptr [rcx+0x3C], 3
 		cmp byte ptr [EnemyWaveSettings::cheaton], 0
 		je originalcode
 		//cmp byte ptr [EnemyWaveSettings::isCustomGenerateType], 1
